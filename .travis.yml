@@ -11,10 +11,10 @@ deploy:
     region: "ap-northeast-2"
     bucket: "storageforgithubdeploy"
     bundle_type: jar
-    key: spring-boot-helloWorld/target/spring-boot-helloworld-0.0.3-SNAPSHOT.jar
+    key: spring-boot-helloWorld/target/spring-boot-helloworld-0.0.4-SNAPSHOT.jar
     on:
       all_branches: true
-    script: "sudo aws s3 cp  spring-boot-helloWorld/target/spring-boot-helloworld-0.0.3-SNAPSHOT.jar"
+    script: "sudo aws s3 cp  spring-boot-helloWorld/target/spring-boot-helloworld-0.0.4-SNAPSHOT.jar"
       
 
  
