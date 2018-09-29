@@ -6,9 +6,9 @@ deploy:
     revision_type: github
     access_key_id: "AKIAJI5ETPA6DEKVPJ5Q"
     secret_access_key: "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"
-    application: "HelloWorld"
-    deployment_group: "DemoFleet"
-    region: "ap-northeast-2c"
+    application: "CodeDeployGitHubDemo-App"
+    deployment_group: "CodeDeployGitHubDemo-DepGrp"
+    region: "ap-northeast-2"
     key: spring-boot-helloWorld/target/spring-boot-helloworld-0.0.2-SNAPSHOT.jar
     bundle_type: jar    
     on:
