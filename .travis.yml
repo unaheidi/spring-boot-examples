@@ -8,7 +8,7 @@ deploy:
     secret_access_key: "1kWWPw7X5kwP+ia9Q91I/bcnj2i8Z730NITm0HTY"
     application: "HelloWorld"
     deployment_group: "DemoFleet"
-    region:ap-northeast-2c
+    region: “ap-northeast-2c”
     key: spring-boot-helloWorld/target/spring-boot-helloworld-0.0.2-SNAPSHOT.jar
     bundle_type: jar    
     on:
