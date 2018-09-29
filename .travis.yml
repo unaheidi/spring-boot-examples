@@ -2,6 +2,15 @@ language: java
 script: mvn  clean  install -f spring-boot-helloWorld/pom.xml
 
 deploy:
+  - provider: s3
+    access_key_id: AKIAJI5ETPA6DEKVPJ5Q
+    secret_access_key: 1kWWPw7X5kwP+ia9Q91I/bcnj2i8Z730NITm0HTY
+    local_dir: /home/travis/build/unaheidi/spring-boot-examples/spring-boot-helloWorld/target
+    skip_cleanup: true
+    on:
+      all_branches: true
+    bucket: storageforgithubdeploy
+    region: ap-northeast-2
   - provider: codedeploy
     revision_type: github
     access_key_id: "AKIAJI5ETPA6DEKVPJ5Q"
@@ -10,11 +19,12 @@ deploy:
     deployment_group: "CodeDeployGitHubDemo-DepGrp"
     region: "ap-northeast-2"
     bucket: "storageforgithubdeploy"
-    bundle_type: jar
-    key: spring-boot-helloWorld/target/spring-boot-helloworld-0.0.4-SNAPSHOT.jar
+    bundle_type: zip
+    key: spring-boot-helloworld-0.0.4-SNAPSHOT.jar
     on:
       all_branches: true
-    script: "sudo aws s3 cp  spring-boot-helloWorld/target/spring-boot-helloworld-0.0.4-SNAPSHOT.jar"
+    wait-until-deployed: true
+
       
 
  
