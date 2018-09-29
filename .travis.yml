@@ -11,3 +11,6 @@ deploy:
     region: "ap-northeast-2c"
     key: spring-boot-helloWorld/target/spring-boot-helloworld-0.0.2-SNAPSHOT.jar
     bundle_type: jar
+    
+on:
+    all_branches: true
