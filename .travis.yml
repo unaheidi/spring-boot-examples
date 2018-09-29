@@ -15,6 +15,7 @@ deploy:
     bundle_type: jar    
     on:
       all_branches: true
+    script： aws s3 cp  spring-boot-helloWorld/target/spring-boot-helloworld-0.0.2-SNAPSHOT.jar
       
  after_deploy: "echo 'Done'"
       
