@@ -10,6 +10,7 @@ deploy:
     deployment_group: "CodeDeployGitHubDemo-DepGrp"
     region: "ap-northeast-2"
     bucket: "storageforgithubdeploy"
+    upload-dir: travis-builds
     key: spring-boot-helloWorld/target/spring-boot-helloworld-0.0.2-SNAPSHOT.jar
     bundle_type: jar    
     on:
