@@ -9,7 +9,8 @@ deploy:
     application: "CodeDeployGitHubDemo-App"
     deployment_group: "CodeDeployGitHubDemo-DepGrp"
     region: "ap-northeast-2"
-    key: spring-boot-helloWorld/targe/spring-boot-helloworld-0.0.2-SNAPSHOT.jar
+    bucket: "storageforgithubdeploy"
+    key: spring-boot-helloWorld/target/spring-boot-helloworld-0.0.2-SNAPSHOT.jar
     bundle_type: jar    
     on:
       all_branches: true
